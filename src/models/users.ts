@@ -1,6 +1,13 @@
-import { User } from '../interfaces/user.interface';
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  role: 'INTERN' | 'ENGINEER' | 'ADMIN';
+}
 
-const users: User[] = [
+type UserType = User;
+
+const users: UserType[] = [
   {
     id: 1,
     name: 'Leanne Graham',
@@ -33,4 +40,4 @@ const users: User[] = [
   },
 ];
 
-export default users;
+export { users, User, UserType };
